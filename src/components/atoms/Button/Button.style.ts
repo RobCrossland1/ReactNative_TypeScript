@@ -2,7 +2,6 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#db4c3f',
     height: 30,
     width: 100,
     borderRadius: 10,
@@ -11,5 +10,11 @@ export default StyleSheet.create({
   text: {
     color: '#fff',
     textAlign: 'center',
+  },
+  primary: {
+    backgroundColor: '#db4c3f',
+  },
+  secondary: {
+    backgroundColor: '#000000',
   },
 });

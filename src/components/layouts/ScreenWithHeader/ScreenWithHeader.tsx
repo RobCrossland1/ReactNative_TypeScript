@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {View} from 'react-native';
 
 import {Header} from '../../organisms';
 
 import styles from './ScreenWithHeader.styles';
 
-const ScreenWithHeader = ({children}) => {
+const ScreenWithHeader: FC = ({children}) => {
   return (
     <>
       <Header />

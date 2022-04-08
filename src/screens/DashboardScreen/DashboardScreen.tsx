@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
-
 import uuid from 'react-native-uuid';
 
 import {Dashboard} from '../../components/layouts';
 
-const DashboardScreen = () => {
-  const [todoItems, setTodoItems] = useState([]);
+import TodoItem from '../../types/TodoItem';
 
-  const addTodoItem = title => {
+const DashboardScreen = () => {
+  const [todoItems, setTodoItems] = useState<TodoItem[]>([]);
+
+  const addTodoItem = (title: string) => {
     setTodoItems(previousItems => [
       ...previousItems,
       {done: false, title, id: uuid.v4().toString()},
     ]);
   };
 
-  const itemPressed = id => {
+  const itemPressed = (id: string) => {
     setTodoItems(previousItems => {
       const item = previousItems.find(_item => _item.id === id);
 

@@ -1,7 +1,11 @@
-import React from 'react';
-import {Text as RNText} from 'react-native';
+import React, {FC} from 'react';
+import {Text as RNText, TextStyle} from 'react-native';
 
-const Text = ({style, children}) => {
+interface TextProps {
+  style?: TextStyle;
+}
+
+const Text: FC<TextProps> = ({style, children}) => {
   return <RNText style={style}>{children}</RNText>;
 };
 
